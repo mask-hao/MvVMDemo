@@ -3,7 +3,6 @@ package com.zhanghao.mymvvmdemo.viewmode
 import android.content.Context
 import android.databinding.*
 import android.view.View
-import com.android.databinding.library.baseAdapters.BR
 import com.zhanghao.mymvvmdemo.bean.ZhiHu
 import com.zhanghao.mymvvmdemo.bean.ZhiHuItem
 import com.zhanghao.mymvvmdemo.model.ZhihuRemoteDataSource
@@ -54,7 +53,7 @@ class ZhiHuViewModel(repository: ZhihuRepository,context: Context):BaseObservabl
                     override fun onComplete() {
                         loadingProgress?.set(View.GONE)
                         zhihuRecycler?.set(View.VISIBLE)
-                        notifyPropertyChanged(BR._all)
+//                        notifyPropertyChanged(BR._all)
                         notifyChange()
                     }
                     override fun onNext(value: ZhiHu?) {

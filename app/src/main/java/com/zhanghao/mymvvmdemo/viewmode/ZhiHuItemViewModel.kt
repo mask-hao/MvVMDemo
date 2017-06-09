@@ -3,7 +3,7 @@ package com.zhanghao.mymvvmdemo.viewmode
 import android.content.Context
 import android.content.Intent
 import android.databinding.BaseObservable
-import com.android.databinding.library.baseAdapters.BR
+
 import com.zhanghao.mymvvmdemo.bean.ZhiHuItem
 import com.zhanghao.mymvvmdemo.ui.SecondActivity
 
@@ -26,7 +26,8 @@ class ZhiHuItemViewModel(var zhiHuItem: ZhiHuItem,var context:Context): BaseObse
 
     fun  setItem(zhiHuItem: ZhiHuItem){
         this.zhiHuItem = zhiHuItem
-        notifyPropertyChanged(BR._all)
+//        notifyPropertyChanged(BR._all)
+        notifyChange()
     }
 
     fun onItemClick(){
